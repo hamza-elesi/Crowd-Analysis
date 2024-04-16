@@ -61,13 +61,13 @@ if not os.path.exists('processed_data'):
 
 movement_data_file = open('processed_data/movement_data.csv', 'w') 
 crowd_data_file = open('processed_data/crowd_data.csv', 'w')
-# sd_violate_data_file = open('sd_violate_data.csv', 'w')
-# restricted_entry_data_file = open('restricted_entry_data.csv', 'w')
+sd_violate_data_file = open('sd_violate_data.csv', 'w')
+restricted_entry_data_file = open('restricted_entry_data.csv', 'w')
 
 movement_data_writer = csv.writer(movement_data_file)
 crowd_data_writer = csv.writer(crowd_data_file)
-# sd_violate_writer = csv.writer(sd_violate_data_file)
-# restricted_entry_data_writer = csv.writer(restricted_entry_data_file)
+sd_violate_writer = csv.writer(sd_violate_data_file)
+restricted_entry_data_writer = csv.writer(restricted_entry_data_file)
 
 if os.path.getsize('processed_data/movement_data.csv') == 0:
 	movement_data_writer.writerow(['Track ID', 'Entry time', 'Exit Time', 'Movement Tracks'])
@@ -111,4 +111,3 @@ video_data = {
 
 with open('processed_data/video_data.json', 'w') as video_data_file:
 	json.dump(video_data, video_data_file)
-

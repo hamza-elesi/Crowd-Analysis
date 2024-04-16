@@ -2,11 +2,11 @@ import datetime
 
 # Video Path
 VIDEO_CONFIG = {
-	"VIDEO_CAP" : "video/7.mp4",
+	"VIDEO_CAP" : "testvid.mp4",
 	"IS_CAM" : False,
 	"CAM_APPROX_FPS": 3,
 	"HIGH_CAM": False,
-	"START_TIME": datetime.datetime(2020, 11, 5, 0, 0, 0, 0)
+	"START_TIME": datetime.datetime(2024, 4, 15, 0, 0, 0, 0)
 }
 
 # Load YOLOv3-tiny weights and config
@@ -23,16 +23,16 @@ DATA_RECORD = True
 # Data record rate (data record per frame)
 DATA_RECORD_RATE = 5
 # Check for restricted entry
-RE_CHECK = False
+RE_CHECK = True
 # Restricted entry time (H:M:S)
 RE_START_TIME = datetime.time(0,0,0) 
 RE_END_TIME = datetime.time(23,0,0)
 # Check for social distance violation
-SD_CHECK = False
+SD_CHECK = True
 # Show violation count
-SHOW_VIOLATION_COUNT = False
+SHOW_VIOLATION_COUNT = True
 # Show tracking id
-SHOW_TRACKING_ID = False
+SHOW_TRACKING_ID = True
 # Threshold for distance violation
 SOCIAL_DISTANCE = 50
 # Check for abnormal crowd activity
