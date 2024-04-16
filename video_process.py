@@ -227,10 +227,10 @@ def video_process(cap, frame_size, net, ln, encoder, tracker, movement_data_writ
 				cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 3)
 
 		# Display current time on screen
-		# current_date = str(current_datetime.strftime("%b-%d-%Y"))
-		# current_time = str(current_datetime.strftime("%I:%M:%S %p"))
-		# cv2.putText(frame, (current_date), (500, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
-		# cv2.putText(frame, (current_time), (500, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
+		current_date = str(current_datetime.strftime("%b-%d-%Y"))
+		current_time = str(current_datetime.strftime("%I:%M:%S %p"))
+		cv2.putText(frame, (current_date), (500, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
+		cv2.putText(frame, (current_time), (500, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
 		
 		# Record crowd data to file
 		if DATA_RECORD:
